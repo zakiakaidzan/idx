@@ -3,7 +3,7 @@ import random
 from bs4 import BeautifulSoup
 from urllib.parse import unquote, urlparse
 from curl_cffi import requests as cffi_requests
-from src.CryptoJsAesHelper import CryptoJsAes, dec
+from CryptoJsAesHelper import CryptoJsAes, dec
 
 # =========================
 # CONFIG
