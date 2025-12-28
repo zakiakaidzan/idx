@@ -8,15 +8,17 @@ def handler(request):
     if content_type not in ["movie", "tv"]:
         content_type = "movie"
 
+    # ✅ HEALTH CHECK (API SUDAH JALAN)
     if not video_id:
         return {
-            "statusCode": 400,
+            "statusCode": 200,
             "body": {
-                "status": False,
-                "message": "Missing id parameter"
+                "status": True,
+                "message": "IDLIX M3U8 API is running"
             }
         }
 
+    # 🔥 MAIN LOGIC
     result = get_m3u8_by_id(video_id, content_type)
 
     return {
